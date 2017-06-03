@@ -9,8 +9,9 @@
 	<tr>
 		<td><%= article.title %></td>
 		<td><%= article.description %></td>
-		<td><a href="<%= edit_article_path(article) %>">Edit Article</a></td>
-		<td><a href="<%= article_path(article) %>">Show Article</a></td>
+		<td><a href="<%= edit_article_path(article) %>">Edit </a></td>
+		<td><a href="<%= article_path(article) %>">Show </a></td>
+		<td><a href="<%= article_path(article) %>" data-method="delete" onclick="alert('Delete <%= article.title %>! Are you sure?')">Delete </a></td>
 	</tr>
 	<% end %> 
 

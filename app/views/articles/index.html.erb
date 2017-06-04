@@ -1,0 +1,18 @@
+<h1>Listing all articles</h1>
+<p><a href="<%= new_article_url %>">Create a new Article</a></p>	
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Description</th>
+	</tr>
+	<% @articles.each do |article| %>
+	<tr>
+		<td><%= article.title %></td>
+		<td><%= article.description %></td>
+		<td><a href="<%= edit_article_path(article) %>">Edit </a></td>
+		<td><a href="<%= article_path(article) %>">Show </a></td>
+		<td><a href="<%= article_path(article) %>" data-method="delete" onclick="alert('Delete <%= article.title %>! Are you sure?')">Delete </a></td>
+	</tr>
+	<% end %> 
+
+</table>

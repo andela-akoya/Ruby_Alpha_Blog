@@ -7,10 +7,9 @@
 </head>
 
 <body>
-<head>
+<header>
 	<%= render('layouts/navigation') %>
-	<%= render('layouts/messages') %>
-</head>
+</header>
 <main>
 	<%= yield %>
 </main>	
@@ -18,5 +17,9 @@
 	<%= render('layouts/footer') %>
 </footer>
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<script>
+  var message = "<%= flash[:notice] %>";
+  Materialize.toast(message, 1000);
+</script>
 </body>
 </html>

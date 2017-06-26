@@ -1,2 +1,27 @@
-<h1>Edit existing Article Page</h1>
-<%= render('form') %>
+<h1 class="center">Edit existing Article Page</h1>
+<%= render('form_errors') %>
+<div class="row">
+	<form action="<%= article_path(@article.id) %>", method="post", class="col-12">
+		<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+		<input type="hidden" name="_method" value="patch" />
+		<div class="row">
+			<div class="input-field col s12">
+				<input id="article-title" type="text" class="validate" name="article[title]" value="<%= @article.title %>">
+				<label for="first_name">Title</label>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<textarea id="textarea1" class="materialize-textarea" name="article[description]"><%= @article.description %></textarea>
+					<label for="textarea1">Description</label>
+				</div>
+			</div>
+			<button class="btn waves-effect waves-light right" type="submit" name="action">Submit
+				<i class="material-icons right">send</i>
+			</button>
+		</div>
+	</form>
+</div>
+<%= form_for @article do |f| %>
+<% end %>
+
+<a href="<%= articles_url %>">Back to article listing</a>

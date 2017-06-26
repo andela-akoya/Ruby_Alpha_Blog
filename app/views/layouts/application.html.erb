@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>AlphaBlog</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+<head>
+ <title>AlphaBlog</title>
+ <%= csrf_meta_tags %>
+ <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+<header>
+ <%= render('layouts/navigation') %>
+</header>
+<main>
+ <%= yield %>
+</main>	
+<footer>
+ <%= render('layouts/footer') %>
+</footer>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<script>
+  var message = "<%= flash[:notice] %>";
+  Materialize.toast(message, 1000);
+</script>
+</body>
 </html>

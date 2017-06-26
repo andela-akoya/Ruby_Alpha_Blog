@@ -1,0 +1,51 @@
+<ul id="category_submenu" class="dropdown-content">
+	<li><a href="#!">LIFESTYLE</a></li>
+	<li class="divider"></li>
+	<li><a href="#!">TRAVEL</a></li>
+	<li class="divider"></li>
+	<li><a href="#!">PICK</a></li>
+	<li class="divider"></li>
+	<li><a href="#!">FINANCE</a></li>
+	<li class="divider"></li>
+	<li><a href="#!">SPORT</a></li>
+	<li class="divider"></li>
+	<li><a href="#!">MOVIES</a></li>
+</ul>
+<ul id="category_submenu2" class="dropdown-content">
+	<li><a href="#!">LIFESTYLE</a></li>
+	<li class="divider"></li>
+	<li><a href="#!">TRAVEL</a></li>
+	<li class="divider"></li>
+	<li><a href="#!">PICK</a></li>
+	<li class="divider"></li>
+	<li><a href="#!">FINANCE</a></li>
+	<li class="divider"></li>
+	<li><a href="#!">SPORT</a></li>
+	<li class="divider"></li>
+	<li><a href="#!">MOVIES</a></li>
+</ul>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		<ul class="left hide-on-med-and-down">
+			<li><a href="<%= root_path %>">Home</a></li>
+			<li><a href="<%= articles_path %>">Articles</a></li>
+			<li><a href="mobile.html">Users</a></li>
+			<li><a class="dropdown-button" href="#!" data-activates="category_submenu">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
+			<li><a href="<%= about_path %>">About</a></li>
+		</ul>
+		<ul class="right hide-on-med-and-down">
+			<li><a href="mobile.html">Login</a></li>
+			<li><a href="mobile.html">Sign Up</a></li>
+		</ul>
+		<ul class="side-nav" id="mobile-demo">
+			<li><a href="<%= root_path %>">Home</a></li>
+			<li><a href="<%= articles_path %>">Articles</a></li>
+			<li><a href="mobile.html">Users</a></li>
+			<li><a class="dropdown-button" href="#!" data-activates="category_submenu2">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
+			<li><a href="<%= about_path %>">About</a></li>
+			<li><a href="mobile.html">Login</a></li>
+			<li><a href="mobile.html">Sign Up</a></li>
+		</ul>
+	</div>
+</nav>

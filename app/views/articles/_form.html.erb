@@ -1,0 +1,21 @@
+<div class="row">
+ <form action="<%= action %>", method="post", class="col-12">
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+	<%= hidden_tag %>
+	<div class="row">
+	 <div class="input-field col s12">
+		<input id="article-title" type="text" class="validate" name="article[title]" minlength="3" required <% if article.title?  %> value="<%= article.title %>" <% end %> >
+		<label for="first_name" data-error="Title is too short(minimum of 3 characters)">Title</label>
+	 </div>
+	 <div class="row">
+		<div class="input-field col s12">
+		 <textarea id="textarea1" class="materialize-textarea" name="article[description]" minlength="3" required><% if article.description? %> <%= article.description %> <% end %></textarea>
+		 <label for="textarea1" data-error="Description is too short (minimum is 3 characters)">Description</label>
+		</div>
+	 </div>
+	 <button class="btn waves-effect waves-light right" type="submit" name="action"><%= submit_button %>
+		<i class="material-icons right">send</i>
+	 </button>
+	</div>
+ </form>
+</div>

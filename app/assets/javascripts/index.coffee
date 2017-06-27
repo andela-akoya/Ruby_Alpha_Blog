@@ -8,9 +8,9 @@ $(document).ready ->
       $('#delete-form').attr('action', '/articles/' + $(event.target).attr('id'))
       $('#delete-form h6').text('(' +$(event.target).attr('data') + ')')
       return
-    Materialize.toast()
     return
 
   $('#delete-modal #close-button').click (event) ->
     event.preventDefault()
+		return
   return

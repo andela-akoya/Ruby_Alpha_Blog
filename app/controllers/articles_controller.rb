@@ -11,10 +11,10 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    if @article.save
-      flash[:notice] = 'Article was successfully created'
+    if @article.save 
+			flash[:notice] = 'Article was successfully created'
 			flash[:color] = 'blue'
-      redirect_to article_path(@article)
+			redirect_to article_path(@article)
     else
       render 'new'
     end
@@ -22,11 +22,11 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      flash[:notice] = 'Article was successfully updated'
+			flash[:notice] = 'Article was successfully updated'
 			flash[:color] = 'green'
-      redirect_to article_path(@article)
-    else
-      render 'edit'
+			redirect_to article_path(@article)
+		else
+			render 'edit'
     end
   end
 
@@ -48,6 +48,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :description)
+    params.require(:article).permit(:title, :description, :image)
   end
 end

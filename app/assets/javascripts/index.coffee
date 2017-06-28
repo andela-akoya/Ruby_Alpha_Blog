@@ -12,5 +12,5 @@ $(document).ready ->
 
   $('#delete-modal #close-button').click (event) ->
     event.preventDefault()
-		return
+    return
   return

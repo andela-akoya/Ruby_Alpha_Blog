@@ -1,11 +1,11 @@
 <h1 class="center">Create an Article</h1>
 <%= render ('form_errors') %>
 <%= render partial: 'form',
-					 locals: {
-						article: @article,
-						submit_button: "Create Article",
-						action: articles_path,
-						hidden_tag: nil
-					 }
+           locals: {
+             article: @article,
+             submit_button: "Create Article",
+             action: articles_path,
+             hidden_tag: nil
+           }
 %>
 <a href="<%= articles_url %>">Back to article listing</a>

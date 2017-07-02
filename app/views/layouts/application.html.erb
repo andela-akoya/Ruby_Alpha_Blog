@@ -6,13 +6,16 @@
  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-<div id="background-image"></div>
-<div id="content">
+<div id="content" >
   <header>
-    <%= render('layouts/navigation') %>
+    <div class="navbar-fixed">
+      <%= render('layouts/navigation') %>
+    </div>
   </header>
   <main id="main">
-    <%= yield %>
+    <div id="main-content">
+      <%= yield %>
+    </div>
   </main>
   <footer>
     <%= render('layouts/footer') %>

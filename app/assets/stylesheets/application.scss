@@ -17,72 +17,75 @@
 
 @import "materialize";
 @import "font-awesome";
-body {
-    font-family: "Times New Roman";
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+body #content{
+  font-family: "Times New Roman";
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+// styling for the form background image
+main {
+  background-size: cover;
+  display: block;
+  width: 100%;
+  height: 80%;
+  flex: 1 0 auto;
 }
 
 .nav-wrapper,
-main {
-    width: 85%;
-    margin: 0 auto;
+#main-content {
+  width: 90%;
+  margin: 0 auto;
 }
 
-main {
-    flex: 1 0 auto;
+header {
+  display: block;
+  height: 10%;
 }
 
+// style for the navigation bar
 nav {
-    background-color: #000;
-    box-shadow: none;
-    div a,
-    div ul a {
-        color: #FFF !important;
-        font-size: 1.1em;
-    }
+  background-color: #000;
+  box-shadow: none;
+  div a,
+  div ul a {
+    color: #FFF !important;
+    font-size: 1.1em;
+  }
 }
 
 .dropdown-content {
-    background-color: #000;
-    a:hover {
-        color: #000 !important;
-    }
+  background-color: #000;
+  a:hover {
+    color: #000 !important;
+  }
 }
 
-div.section {
-    div {
-        width: 85%;
-        margin: 0 auto;
-    }
-}
-
+// style for footer
 footer {
-    height: 20%;
-    padding-top: 10px !important;
-    background-color: #000 !important;
-    div.section {
-        color: #FFF;
-        i {
-            margin-right: 40px;
-        }
-    }
+  display: block;
+  height: 10%;
+  padding-top: 10px !important;
+  background-color: #000 !important;
+  div.section {
+   color: #FFF;
+   i {
+     margin-right: 40px;
+   }
+  }
 }
 
+// style for the delete modal
 #delete-modal {
   max-width: 550px !important;
   padding-left: 10px;
-
   h5 {
-    color: darkred;
+   color: darkred;
   }
-
-
   button {
-    text-transform: none;
+   text-transform: none;
   }
-
   #close-button {
     background-color: transparent;
     border: solid 1px black ;
@@ -92,5 +95,30 @@ footer {
     background-color: darkred;
     margin-right: 5px;
   }
+}
+
+// change the overflow style of the description text-area
+#description-textarea {
+  overflow-y: visible !important;
+  min-height: 300px;
+}
+
+// centralize the placeholder for article form
+#article-form {
+  input {
+    text-align: center;
+  }
+
+  input#article-title {
+    font-size: 3rem !important;
+    padding: 20px 0px;
+  }
+
+  #description-textarea {
+    font-size: 1.2rem !important;
+    text-align: justify;
+  }
 
 }
+
+

@@ -1,6 +1,6 @@
 $(document).ready ->
-  $('#article-image').focusout (event) ->
-    imageUrl = $('#article-image').val()
+  $('#article-image-field').focusout (event) ->
+    imageUrl = $('#article-image-field').val()
     if imageUrl
       $('main').css 'background-image', 'url(' + imageUrl + ')'
     else

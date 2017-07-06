@@ -2,14 +2,27 @@
   <div class="col s12 m12 l7 xl7">
     <div class="row">
       <div id="article-title" class="col s12">
-        <p><%= @article.title %></p>
+        <p><%= @article.title %><br/><span><i class="material-icons large center" style="line-height: 0.5px; ">remove</i></span></p>
       </div>
       <div id="article-image" class="col s12" style="background-image: url('<%= @article.image %>');"></div>
       <div id="article-description" class="col s12">
         <p><%= @article.description %></p>
       </div>
     </div>
-    <a href="<%= edit_article_path %>">Edit Article</a> | <a href="<%= articles_url %>">Back to articles listing</a>
+    <a href="<%= articles_url %>" class="btn" style="background-color: #2196F3">
+      Back to articles listing
+      <i class="material-icons right">keyboard_return</i>
+    </a>
+    <a href="<%= edit_article_path %>" class="btn">
+      Edit Article
+      <i class="material-icons right">mode_edit</i>
+    </a>
+    <a id="<%= @article.id %>" style="background-color: #F44336" class="delete-article btn" href="#delete-modal" data="<%= @article.title %>">
+      Delete Article
+      <i class="material-icons right">delete</i>
+    </a>
+
   </div>
   <%= render partial: "layouts/right_aside_section", locals: {article: @article} %>
+  <%= render partial: 'delete_modal' %>
 </div>

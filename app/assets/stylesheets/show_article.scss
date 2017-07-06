@@ -8,12 +8,20 @@ div #article-image {
   margin: 0 auto;
 }
 
-div #article-title p {
-  text-align: center;
-  font-size: 2rem;
+div #article-title {
+  height : 105px;
+  padding-bottom: 0px !important;
+  p {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
 }
 
-div #article-description p {
-  text-align: justify;
-  font-size: 20px;
+div #article-description {
+  padding: 0px;
+  p {
+    text-align: justify;
+    font-size: 20px;
+  }
 }

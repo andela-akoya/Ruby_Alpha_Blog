@@ -4,10 +4,10 @@
   <%= hidden_tag %>
   <div class="row">
     <div class="input-field col s12">
-      <input id="article-title" type="text" class="validate" name="article[title]" minlength="3" required placeholder="TITLE" <% if article.title?  %> value="<%= article.title %>" <% end %> >
+      <input id="article-title-field" type="text" class="validate" name="article[title]" minlength="3" required placeholder="TITLE" <% if article.title?  %> value="<%= article.title %>"<% end %> >
     </div>
     <div class="input-field col s12">
-      <input id="article-image" type="url" class="validate" name="article[image]" required placeholder="IMAGE URL" <% if article.image?  %> value="<%= article.image %>" <% end %> >
+      <input id="article-image-field" type="url" class="validate" name="article[image]" required placeholder="IMAGE URL" <% if article.image?  %> value="<%= article.image %>"<% end %> >
     </div>
     <div class="input-field col s12">
       <textarea id="description-textarea" class="materialize-textarea" name="article[description]" minlength="3" required placeholder="DESCRIPTION"><% if article.description? %><%= article.description %> <% end %></textarea>

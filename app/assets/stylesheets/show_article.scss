@@ -1,11 +1,8 @@
 // setting the background image
-
 div #article-image {
-  height: 600px;
   width: 100% !important;
-  background-size: 100% 100% ;
-  background-repeat: no-repeat;
   margin: 0 auto;
+  padding: 0px !important;
 }
 
 div #article-title {
@@ -19,9 +16,10 @@ div #article-title {
 }
 
 div #article-description {
-  padding: 0px;
+  padding: 0px !important;
   p {
     text-align: justify;
     font-size: 20px;
   }
 }
+

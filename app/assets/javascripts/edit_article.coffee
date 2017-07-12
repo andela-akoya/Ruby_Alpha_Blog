@@ -1,6 +1,6 @@
 $(document).ready ->
   # loading the background image for the edit form page
-  imageUrl = $('#article-image-field').attr 'image_remote_url'
+  imageUrl = $('#article-image-field').val()
   if imageUrl
     $('main').css 'background-image', 'url(' + imageUrl + ')'
 

@@ -5,7 +5,7 @@
         <p><%= @article.title %><br/><span><i class="material-icons large center" style="line-height: 0.5px; ">remove</i></span></p>
       </div>
       <div id="article-image" class="col s12" >
-        <img class="materialboxed" width="100%" src="<%= @article.image %>">
+        <img class="materialboxed" width="100%" src="<%= cl_image_path(@article.image_remote_url, :crop => :fill) %> ">
       </div>
       <div id="article-description" class="col s12">
         <p><%= @article.description %></p>

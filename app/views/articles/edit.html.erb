@@ -1,0 +1,10 @@
+<%= render('form_errors') %>
+<%=
+ render partial: 'form',
+        locals: {
+          article: @article,
+          submit_button: "Update Article",
+          action: article_path(@article.id),
+          hidden_tag: hidden_field_tag("_method", "patch")
+        }
+%>

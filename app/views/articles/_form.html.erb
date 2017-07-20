@@ -1,0 +1,20 @@
+<div class="row" style="background-color: white; padding: 20px;">
+ <form id="article-form" action="<%= action %>", method="post", class="col-12">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_tag %>
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="article-title-field" type="text" class="validate" name="article[title]" minlength="3" required placeholder="TITLE" <% if article.title?  %> value="<%= article.title %>"<% end %> >
+    </div>
+    <div class="input-field col s12">
+      <input id="article-image-field" type="url" class="validate" name="article[image]" required placeholder="IMAGE URL" <% if article.image?  %> value="<%= article.image %>"<% end %> image_remote_url="<%= article.image_remote_url %>" >
+    </div>
+    <div class="input-field col s12">
+      <textarea id="description-textarea" class="materialize-textarea" name="article[description]" minlength="3" required placeholder="DESCRIPTION"><% if article.description? %><%= article.description %> <% end %></textarea>
+    </div>
+    <button class="btn waves-effect waves-light right" type="submit" name="action"><%= submit_button %>
+      <i class="material-icons right">send</i>
+    </button>
+  </div>
+ </form>
+</div>

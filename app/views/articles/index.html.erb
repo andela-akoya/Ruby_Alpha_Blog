@@ -1,0 +1,19 @@
+<h1>Listing all articles</h1>
+<p><a href="<%= new_article_url %>">Create a new Article</a></p>	
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.description %></td>
+      <td><a href="<%= edit_article_path(article) %>">Edit </a></td>
+      <td><a href="<%= article_path(article) %>">Show </a></td>
+      <td><a id="<%= article.id %>" class="delete-article" href="#delete-modal" data="<%= article.title %>">Delete </a></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= render partial: 'delete_modal' %>

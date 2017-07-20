@@ -1,0 +1,25 @@
+// setting the background image
+div #article-image {
+  width: 100% !important;
+  margin: 0 auto;
+  padding: 0px !important;
+}
+
+div #article-title {
+  height : 105px;
+  padding-bottom: 0px !important;
+  p {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+}
+
+div #article-description {
+  padding: 0px !important;
+  p {
+    text-align: justify;
+    font-size: 20px;
+  }
+}
+

@@ -18,6 +18,11 @@ test:
   <<: *default
   database: <%= ENV['POSTGRES_TEST_DB'] %>
 
+staging:
+  <<: *default
+  database: <%= ENV['POSTGRES_DB'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
 production:
   <<: *default
   database: <%= ENV['POSTGRES_DB'] %>

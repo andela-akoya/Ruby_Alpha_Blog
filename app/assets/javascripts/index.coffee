@@ -5,8 +5,8 @@ $(document).ready ->
 
   $('.delete-article').each (index, value) ->
     $(value).click (event) ->
-      $('#delete-form').attr('action', '/articles/' + $(event.target).attr('id'))
-      $('#delete-form h6').text('(' +$(event.target).attr('data') + ')')
+      $('#delete-form').attr('action', '/articles/' + $(event.currentTarget).attr('id'))
+      $('#delete-form h6').text('(' +$(event.currentTarget).attr('data') + ')')
       return
     return
 

@@ -59,7 +59,7 @@ class ArticlesController < ApplicationController
   def article_params
     parameters = params.require(:article).permit(:title, :description, :image)
     image_hash = upload_image(parameters[:image])
-    if !image_hash.empty?
+    if image_hash
       parameters[:image_remote_url] = image_hash['secure_url']
       parameters[:image_remote_id] = image_hash['public_id']
       return parameters

@@ -11,7 +11,7 @@
     <div class="row">
       <% @articles.each do |article| %>
         <div class="col s12 m6 l3">
-          <div class="card">
+          <div class="card index-article-card">
             <div class="card-image">
               <img class="materialboxed" width="100%" height="300px" src="<%= cl_image_path(article.image_remote_url) %> ">
               <div class="fixed-action-btn index-page-article-menu-btn" >

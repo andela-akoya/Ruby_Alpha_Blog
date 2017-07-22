@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20170711164240) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
-    t.string "image_remote_url"
     t.string "image_remote_id"
+    t.string "image_remote_url"
   end
 
 end

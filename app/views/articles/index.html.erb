@@ -1,19 +1,48 @@
-<h1>Listing all articles</h1>
-<p><a href="<%= new_article_url %>">Create a new Article</a></p>	
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-  </tr>
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.description %></td>
-      <td><a href="<%= edit_article_path(article) %>">Edit </a></td>
-      <td><a href="<%= article_path(article) %>">Show </a></td>
-      <td><a id="<%= article.id %>" class="delete-article" href="#delete-modal" data="<%= article.title %>">Delete </a></td>
-    </tr>
-  <% end %>
-</table>
-
+<div class="row">
+  <div class="col s12 ">
+    <h1 class="center">Articles</h1>
+  </div>
+  <div id="index-page-add-article-btn" class="fixed-action-btn">
+    <a href="<%= new_article_url %>" class="btn-floating btn-large waves-effect waves-light red right tooltipped pulse" data-tooltip="Add a new article">
+      <i class="material-icons">add</i>
+    </a>
+  </div>
+  <div class="col s12">
+    <div class="row">
+      <% @articles.each do |article| %>
+        <div class="col s12 m6 l3">
+          <div class="card">
+            <div class="card-image">
+              <img class="materialboxed" width="100%" height="300px" src="<%= cl_image_path(article.image_remote_url) %> ">
+              <div class="fixed-action-btn index-page-article-menu-btn" >
+                <a class="btn-floating btn-large green">
+                  <i class="large material-icons">menu</i>
+                </a>
+                <ul>
+                  <li>
+                    <a id="<%= article.id %>" href="#delete-modal" class="btn-floating red delete-article" data="<%= article.title %>">
+                      <i class="material-icons">delete</i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<%= edit_article_path(article) %>" class="btn-floating blue">
+                      <i class="material-icons">mode_edit</i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-content">
+              <a href="<%= article_path(article) %>" class="card-title center index-page-article-title"><%= article.title %></a>
+              <p><%= article.description.truncate(200, separator: ' ') %></p>
+            </div>
+            <div class="card-action center">
+              <p><%= article.created_at.strftime("%B %d, %Y")%></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 <%= render partial: 'delete_modal' %>

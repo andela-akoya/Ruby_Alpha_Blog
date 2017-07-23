@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:edit, :update, :show, :destroy]
+  before_action :set_article, only: %i(edit update show destroy)
 
   def index 
     @articles = Article.all
@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
     article_hash = article_params
     if article_hash
       @article = Article.new(article_hash)
+      @article.user = User.first
       save_article
     else
       flash[:notice] = 'Sorry, An error occurred! Please try again'

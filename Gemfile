@@ -44,8 +44,6 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Adding new relic
-gem 'newrelic_rpm'
 
 # Adding cloudinary
 gem 'cloudinary'

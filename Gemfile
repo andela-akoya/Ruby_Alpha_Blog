@@ -44,6 +44,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Adding bcrypt
+gem 'bcrypt', '~> 3.1.7'
 
 # Adding cloudinary
 gem 'cloudinary'

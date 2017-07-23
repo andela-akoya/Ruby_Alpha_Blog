@@ -37,7 +37,7 @@
               <p><%= article.description.truncate(200, separator: ' ') %></p>
             </div>
             <div class="card-action center">
-              <p><%= article.created_at.strftime("%B %d, %Y")%></p>
+              <p><%= article.user.username %>&nbsp; | &nbsp; <%= article.created_at.strftime("%B %d, %Y")%></p>
             </div>
           </div>
         </div>

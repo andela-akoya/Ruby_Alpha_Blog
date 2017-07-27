@@ -1,18 +1,53 @@
-<div class="section" style="border-bottom: solid 0.1px lightgrey; height: 20%">
-	<div class="row center">
-		<h3>ALPHA BLOG</h3>
-		<p style="color: gray">JUST ANOTHER RAILS SITE</p>
-	</div>
+<div class="slider fullscreen">
+  <div>
+    <div id="home-container" class="row">
+      <div id="home-nav" class="col s12" >
+        <h3>POST<small>art</small></h3>
+      </div>
+      <div id="home-btn-div" class="col s12 " >
+        <a href="#login" class="waves-effect waves-light btn  home-btn blue btn-large "><i class="small fa fa-sign-in left"></i>Login</a>
+        <a href="#signup" class="waves-effect waves-light btn  home-btn red btn-large modal-trigger"><i class="small fa fa-pencil-square-o right"></i>Signup</a>
+      </div>
+    </div>
+  </div>
+  <ul id="slide" class="slides">
+    <li>
+      <img src="/assets/lion.jpg"> <!-- random image -->
+      <div class="caption center-align">
+        <h3>This is our big Tagline!</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="/assets/starwars.jpg"> <!-- random image -->
+      <div class="caption left-align">
+        <h3>Left Aligned Caption</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="/assets/storm.jpg"> <!-- random image -->
+      <div class="caption right-align">
+        <h3>Right Aligned Caption</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="/assets/street.jpg"> <!-- random image -->
+      <div class="caption center-align">
+        <h3>This is our big Tagline!</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="/assets/car.jpg"> <!-- random image -->
+      <div class="caption center-align">
+        <h3>This is our big Tagline!</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+  </ul>
 </div>
-<div class="section">
-	<div class="row">
-		<h5>Section 2</h5>
-		<p>Stuff</p>
-	</div>
-</div>
-<div class="section">
-	<div class="row">
-		<h5>Section 3</h5>
-		<p>Stuff</p>
-	</div>
-</div>
+<%= render :partial => 'users/register_form' %>
+<%= render :partial => 'users/login_form' %>
+

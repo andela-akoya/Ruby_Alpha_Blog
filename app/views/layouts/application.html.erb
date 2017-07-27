@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>AlphaBlog</title>
+ <title>POSTart</title>
  <%= csrf_meta_tags %>
  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
 <div id="content" >
-  <header>
-    <div class="navbar-fixed">
-      <%= render('layouts/navigation') %>
-    </div>
-  </header>
+  <%= render('layouts/navigation') %>
   <main id="main">
     <div id="main-content">
       <%= yield %>
@@ -26,6 +22,13 @@
     var message = "<%= flash[:notice] %>";
     var color = "<%= flash[:color] %>";
     Materialize.toast(message, 1000, color);
+    if (window.location.pathname == "/") {
+      $('#main-nav').css('display', 'none');
+      $('footer').css('display', 'none');
+    } else {
+      $('#main-nav').css('display', 'block');
+      $('footer').css('display', 'block');
+    }
   </script>
 </body>
 </html>

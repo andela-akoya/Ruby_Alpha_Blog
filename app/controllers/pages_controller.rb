@@ -1,9 +1,10 @@
 class PagesController < ApplicationController
-    def home
-        
-    end
+  def home
+    @article = Article.first
+    @new_article = Article.new
+  end
 
-    def about
+  def about
     
     end
 end

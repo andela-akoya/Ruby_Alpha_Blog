@@ -1,0 +1,54 @@
+#home-container {
+  position: relative;
+  z-index: 999;
+  margin: 0 auto;
+  width: 80%;
+
+  #home-nav {
+    color: white;
+  }
+
+  #home-btn-div {
+    position: fixed;
+    left: 30%;
+    bottom: 10%;
+  }
+
+  .home-btn {
+    width: 20%;
+  }
+}
+
+#slide{
+  overflow: hidden;
+  li > img {
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+    width: 110%;
+    height: 110%;
+    margin-left: -15px;
+    margin-top: -15px;
+  }
+}
+
+#signup, #login{
+  background: transparent;
+  color: white;
+  width: 25%;
+  margin-top: 10%;
+
+  input {
+    text-align: center;
+  }
+
+  label {
+    left: 0 !important;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

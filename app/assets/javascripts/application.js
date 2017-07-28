@@ -13,4 +13,8 @@
 //= require jquery
 //= require turbolinks
 //= require materialize-sprockets
-//= require_tree .
+//=
+$(document).ready(function() {
+  $('.slider').slider();
+  $('.modal').modal();
+});

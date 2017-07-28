@@ -10,7 +10,7 @@
   <div class="col s12">
     <div class="row">
       <% @articles.each do |article| %>
-        <div class="col s12 m6 l3">
+        <div class="col s12 m6 l3 xl3">
           <div class="card index-article-card">
             <div class="card-image">
               <img class="materialboxed" width="100%" height="300px" src="<%= cl_image_path(article.image_remote_url) %> ">
@@ -34,7 +34,7 @@
             </div>
             <div class="card-content">
               <a href="<%= article_path(article) %>" class="card-title center index-page-article-title"><%= article.title %></a>
-              <p><%= article.description.truncate(200, separator: ' ') %></p>
+              <p><%= article.description.truncate(150, separator: ' ') %></p>
             </div>
             <div class="card-action center">
               <p><%= article.user.username %>&nbsp; | &nbsp; <%= article.created_at.strftime("%B %d, %Y")%></p>

@@ -4,7 +4,5 @@ class PagesController < ApplicationController
     @new_article = Article.new
   end
 
-  def about
-    
-    end
+  def about; end
 end

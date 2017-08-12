@@ -20,7 +20,7 @@
     </li>
     <li>
       <%= image_tag 'starwars.jpg' %>
-      <div class="caption left-align">
+      <div class="caption left-alicgn">
         <h3>Left Aligned Caption</h3>
         <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
       </div>
@@ -48,6 +48,11 @@
     </li>
   </ul>
 </div>
-<%= render :partial => 'users/register_form' %>
-<%= render :partial => 'users/login_form' %>
+<div id="signup-form-modal-div">
+  <%= render :partial => 'users/register_form' %>
+</div>
+<div id="login-form-modal-div">
+  <%= render :partial => 'users/login_form' %>
+</div>
+
 

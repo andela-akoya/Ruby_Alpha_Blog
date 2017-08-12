@@ -21,7 +21,8 @@
   <script>
     var message = "<%= flash[:notice] %>";
     var color = "<%= flash[:color] %>";
-    Materialize.toast(message, 1000, color);
+    var delay = "<%= flash[:delay] %>" || 1000
+    Materialize.toast(message, delay, color);
     if (window.location.pathname == "/") {
       $('#main-nav').css('display', 'none');
       $('footer').css('display', 'none');

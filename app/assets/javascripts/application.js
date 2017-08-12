@@ -14,3 +14,7 @@
 //= require turbolinks
 //= require materialize-sprockets
 //= require_tree .
+
+window.getCsrfToken = function(xhr) {
+  return xhr.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'));
+}

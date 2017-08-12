@@ -3,18 +3,22 @@
     <h4>Find your inspiration.</h4>
     <p>More than enough articles to explore</p>
     <div id="signup-form-div">
-      <%= form_for :user do |f| %>
+      <%= form_for(@user) do |f| %>
+
         <div class="input-field col s6">
-          <%= f.text_field  :username, :placeholder => "Username" %>
+          <%= f.text_field  :username, :placeholder => "Username", :required => true %>
+          <p id="username_error"></p>
         </div>
         <div class="input-field col s6">
-          <%= f.text_field  :email, :placeholder => "Email" %>
+          <%= f.text_field  :email, :placeholder => "Email", :required => true %>
+          <p id="email_error"></p>
         </div>
         <div class="input-field col s6">
-          <%= f.password_field :password, :placeholder => "Password" %>
+          <%= f.password_field :password, :placeholder => "Password", :required => true %>
         </div>
         <div class="input-field col s6">
-          <%= f.password_field :password, :placeholder => "Confirm Password" %>
+          <input id="user_confirm_password" type="password" name="user[confirm_password"] placeholder="Confirm password" required />
+          <p id="password_error"></p>
         </div>
         <div class="input-field col s6">
           <%= f.submit :Register,  class: "btn red" %>

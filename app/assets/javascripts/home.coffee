@@ -4,22 +4,27 @@ $(document).ready ->
 
   $('#new_user').on 'submit', (e) ->
     e.preventDefault()
-    console.log $('meta[name="csrf-token"]').attr('content')
     $.ajax
       type: 'POST'
       url: '/users'
-      beforeSend: (xhr) ->
-        xhr.setRequestHeader 'X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content')
-        return
+      beforeSend: window.getCsrfToken
       contentType: 'application/json;charset=utf-8'
       data: JSON.stringify({
         "user": buildSignupData()
       })
       success: (data) ->
-        console.log data
         return
       error: (error) ->
-        console.log error
+        message = error.responseJSON
+        if message.username
+        then $('#username_error').html("Username " + message.username[0])
+        else $('#username_error').html ''
+        if message.email
+        then $('#email_error').html("Email " + message.email[0])
+        else $('#email_error').html ''
+        if message.password
+        then $('#password_error').html(message.password)
+        else $('#password_error').html ''
         return
     return
 
